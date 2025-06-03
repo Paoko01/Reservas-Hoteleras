@@ -66,3 +66,5 @@ export const deleteReserva = (id) => {
     reservas = reservas.filter(reserva => reserva.id !== id);
     return reservas.length < initialLength; // Retorna true si se eliminó algo
 };
+
+
