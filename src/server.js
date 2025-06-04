@@ -15,7 +15,7 @@ app.use(cors());
 app.use('/api/v1', apiRouter);
 
 app.get('/', (req, res) => {
-  res.send('¡Hola desde el backend de tu e-commerce! El servidor está funcionando.');
+  res.send('¡Hola desde el backend de Reservas Hoteleras! El servidor está funcionando.');
 });
 
 app.listen(envs.port, () => {
