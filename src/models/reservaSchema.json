@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" },
+      "hotel": { "type": "string" },
+      "fechaInicio": { "type": "string", "format": "date" },
+      "fechaFin": { "type": "string", "format": "date" },
+      "tipoHabitacion": { "type": "string" },
+      "estado": { "type": "string" },
+      "numeroHuespedes": { "type": "integer" }
+    },
+    "required": [
+      "hotel",
+      "fechaInicio",
+      "fechaFin",
+      "tipoHabitacion",
+      "estado",
+      "numeroHuespedes"
+    ]
+}

@@ -1,4 +1,4 @@
-import { getAllReservas, getReservaById, createReserva, updateReserva, deleteReserva} from '../services/Reservas.service.js';
+import { getAllReservasService, getReservaByIdService, createReservaService, updateReservaService, deleteReservaService} from '../services/Reservas.service.js';
 import { response } from '../Utils/templates/response.template.js';
 
 
@@ -16,7 +16,7 @@ export const getAllReservas = async(req, res, next) => {
 
 export const createReserva = async(req, res, next) => {
     try {
-        const reservas = await createReserva();
+        const reservas = await createReservaService();
         response(res, reservas, 201, 'Reserva creada con éxito');
     } catch (error) {
         next(error);
@@ -24,8 +24,31 @@ export const createReserva = async(req, res, next) => {
 };
 
 
-export const getReservaById;
+export const getReservaById = async(req, res, next) => {
+    try {
+        const reservas = await getReservaByIdService();
+        response(res, reservas, 202, 'Reserva creada con éxito');
+    } catch (error) {
+        next(error);
+    }
+};
 
-export const updateReserva;
 
-export const deleteReserva;
+export const updateReserva = async(req, res, next) => {
+    try {
+        const reservas = await updateReservaService();
+        response(res, reservas, 203, 'Reserva creada con éxito');
+    } catch (error) {
+        next(error);
+    }
+};
+
+
+export const deleteReserva = async(req, res, next) => {
+    try {
+        const reservas = await deleteReservaService();
+        response(res, reservas, 204, 'Reserva creada con éxito');
+    } catch (error) {
+        next(error);
+    }
+};
